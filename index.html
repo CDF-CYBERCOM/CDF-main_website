@@ -13,6 +13,35 @@
   </head>
   <body>
     <rux-classification-marking classification="unclassified" label="//FOUO"></rux-classification-marking>
-    
+    <div style="width: 60%; margin: auto">
+      <form style="padding: 1rem" method="POST" action="/">
+        <div>
+          <rux-input name="email" type="email" label="Email"></rux-input>
+        </div>
+        <div>
+          <rux-select name="agency" label="Agency / Department / Office">
+            <rux-option value="CSA" label="Central Security Agency"></rux-option>
+            <rux-option value="FIA" label="Foreign Intelligence Agency"></rux-option>
+            <rux-option value="ISA" label="Internal Security Agency"></rux-option>
+            <rux-option value="ODJI" label="Office of the Director of Joint Intelligence"></rux-option>
+          </rux-select>
+        </div>
+        <div>
+          <rux-checkbox name="consent" label="consent">By clicking "Login" below, I certify that I am a valid member of the Civil Defense Forces or one of its partner groups. </rux-checkbox>
+        </div>
+        <div>
+          <rux-button type="submit">Login</rux-button>
+        </div>
+      </form>
+      <script>
+        const form = document.querySelector('form')
+        form.addEventListener('login', (e) => {
+          e.preventDefault()
+          const formData = new formData(form)
+          const consent = [formData.get('consent')]
+          console.log(consent)
+        })
+      </script>
+    </div>
   </body>
 </html>
