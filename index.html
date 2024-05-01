@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
+
+    <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
@@ -13,17 +14,21 @@
   </head>
   <body>
     <rux-classification-marking classification="unclassified" label="//FOUO"></rux-classification-marking>
-    <h1>Notice</h1>
-    <h2>You are accessing a Civil Defense Forces (CDF) Information System (IS) that is provided for CDF-authorized use only.</h2>
-    <h4>By using this IS (which includes any device attached to this IS), you consent to the following conditions:</h4>
-    <ul>
-      <li>The CDF routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.</li>
-      <li>At any time, the CDF may inspect and seize data stored on this IS.</li>
-      <li>Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any CDF authorized purpose.</li>
-      <li>This IS includes security measures (e.g., authentication and access controls) to protect CDF interests--not for your personal benefit or privacy.</li>
-      <li>NOTICE: There is the potential that information presented and exported from the CDF Portal contains FOUO or Controlled Unclassified Information (CUI). It is the responsibility of all users to ensure information extracted from the CDF Portal is appropriately marked and properly safeguarded. If you are not sure of the safeguards necessary for the information, contact your functional lead or Information Security Officer.</li>
-      <li>NOTICE: There is the potential that information presented and exported from sites connected to the CDF Portal contains FOUO, Controlled Unclassified Information (CUI), National Security Information (NSI), or Critical Security Information (CSI). It is the responsibility of all users to ensure information extracted from sites connected to the CDF Portal is appropriately marked and properly safeguarded. If you are not sure of the safeguards necessary for the information, contact your functional lead or Information Security Officer.</li>
-      <li>Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See <a href="/user_agreement.html">User Agreement</a> for details.</li>
-    </ul>
+    <div id="is_warning_modal" class="modal">
+      <div class="modal-content">
+        <h1>Notice</h1>
+        <h2>You are accessing a Civil Defense Forces (CDF) Information System (IS) that is provided for CDF-authorized use only.</h2>
+        <h4>By using this IS (which includes any device attached to this IS), you consent to the following conditions:</h4>
+        <ul>
+          <li>The CDF routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.</li>
+          <li>At any time, the CDF may inspect and seize data stored on this IS.</li>
+          <li>Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any CDF authorized purpose.</li>
+          <li>This IS includes security measures (e.g., authentication and access controls) to protect CDF interests--not for your personal benefit or privacy.</li>
+          <li>NOTICE: There is the potential that information presented and exported from the CDF Portal contains FOUO or Controlled Unclassified Information (CUI). It is the responsibility of all users to ensure information extracted from the CDF Portal is appropriately marked and properly safeguarded. If you are not sure of the safeguards necessary for the information, contact your functional lead or Information Security Officer.</li>
+          <li>NOTICE: There is the potential that information presented and exported from sites connected to the CDF Portal contains FOUO, Controlled Unclassified Information (CUI), National Security Information (NSI), or Critical Security Information (CSI). It is the responsibility of all users to ensure information extracted from sites connected to the CDF Portal is appropriately marked and properly safeguarded. If you are not sure of the safeguards necessary for the information, contact your functional lead or Information Security Officer.</li>
+          <li>Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See <a href="/user_agreement.html">User Agreement</a> for details.</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
