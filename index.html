@@ -38,16 +38,29 @@
          font: 18px Roboto, sans-serif;
       }
       .seal {
-        margin-left: 5%;
-        margin-right: 5%;
-        /* margin-bottom: 5%; */
         width: 10%;
         height: 10%;
       }
-      .seal_list {
+      #cdf-csa {
+        display: inline-block;
+        margin-right: 5%;
+      }
+      #cdf-fis {
+        display: inline-block;
+        margin-right: 5%;
+      }
+      #cdf-isa {
         display: inline-block;
       }
-      .cdf-csa {
+      #army {
+        display: inline-block;
+        margin-right: 5%;
+      }
+      #airforce {
+        display: inline-block;
+        margin-right: 5%;
+      }
+      #navy {
         display: inline-block;
       }
     </style>
@@ -55,10 +68,30 @@
   <body>
     <header><p><b>UNCLASSIFIED</b></p></header>
     <div class="main">
-      <h2>Welcome to the Civil Defense Forces</h2>
+      <h1>Civil Defense Forces</h1>
+      <h2><i>Serving the US since 2024</i></h2>
       <p>This is the official website of the Civil Defense Forces (CDF). Development is in progress and may not reflect the final product.</p>
-      <p>Central Security Agency</p>
-      <img src="cdf-csa.png" alt="Seal of the Civil Defense Forces Central Security Agency" class="seal" title="Central Security Agency" />
+      <h3>Defense Components</h3>
+      <div id="army">
+        <p>Army</p>
+      </div>
+      <div id="airforce">
+        <p>Air Force</p>
+      </div>
+      <div id="navy">
+        <p>Navy</p>
+      </div>
+      <h3>Intelligence Components</h3>
+      <div id="cdf-csa">
+        <p>Central Security Agency</p>
+        <img src="cdf-csa.png" alt="Seal of the Civil Defense Forces Central Security Agency" class="seal" title="Central Security Agency" />
+      </div>
+      <div id="cdf-fis">
+        <p>Foreign Intelligence Service</p>
+      </div>
+      <div id="cdf-isa">
+        <p>Internal Security Agency</p>
+      </div>
     <footer><p><b>UNCLASSIFIED</b></p></footer>
   </body>
 </html>
