@@ -3,11 +3,73 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>(U//FOUO) Civil Defense Forces | Home</title>
+    <title>Civil Defense Forces | Home</title>
+    <script>
+      function menuToggle() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
       .main {
         margin-top: 50px;
+      }
+      .navbar {
+        background-color: black;
+        overflow: hidden;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font: Roboto, sans-serif;
+      }
+      .navbar a:hover {
+        background-color: navy;
+        color: black;
+      }
+      .navbar a.active {
+        background-color: navy;
+        color: white;
+      }
+      .navbar .icon {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        .navbar a:not(:first-child) {
+          display: none;
+        }
+        .navbar a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .navbar.responsive {
+          position: relative;
+        }
+        .navbar.responsive a.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .navbar.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      #myportal {
+        float: right;
       }
       p {
          font: 18px Roboto, sans-serif;
@@ -43,9 +105,13 @@
   <body>
     <div class="navbar" id="navbar">
       <a href="#" class="active">Home</a>
+      <a href="divisions.html">Divisions</a>
       <a href="careers.html">Careers</a>
       <a href="about.html">About</a>
       <a href="myportal" id="myportal">MyPortal</a>
+      <a href="javascript:void(0);" class="icon" onclick="menuToggle()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     <div class="main">
       <h1>Civil Defense Forces</h1>
