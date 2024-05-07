@@ -15,9 +15,9 @@
         }
       }
       var modal = document.getElementById("modal");
-      var modalCloseButton = document.getElementById("modalClose");
-      modalCloseButton.onclick = modalClose() {
-        cdfismodal.style.display = "none";
+      var modalClose = document.getElementById("modalClose");
+      modalClose.onclick = modalClose(selectedModal) {
+        document.getElementById(selectedModal).style.display = "none";
       }
     </script>
     <style>
@@ -177,7 +177,7 @@
           <br>
           <li>Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See <a href="/user_agreement.html">User Agreement</a> for details.</li>
         </ul>
-        <button class="modalClose" onclick="modalClose()">I Agree</button>
+        <button class="modalClose" onclick="modalClose(cdfismodal)">I Agree</button>
       </div>
     </div>
   </body>
