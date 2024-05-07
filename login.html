@@ -16,9 +16,6 @@
       }
       var modal = document.getElementById("modal");
       var span = document.getElementById("modalClose");
-      modalLoad() {
-        modal.style.display = "block";
-      }
       span.onclick = modalClose() {
         modal.style.display = "none";
       }
@@ -139,7 +136,7 @@
          font: Roboto, sans-serif;
       }
       .modal {
-        display: none;
+        display: block;
         position: fixed;
         z-index: 2;
         left: 0;
@@ -150,7 +147,7 @@
       }
     </style>
   </head>
-  <body onload="modalLoad();">
+  <body>
     <div id="CDF-IS-modal" class="modal">
       <div class="modal-contents">
         <h1>Notice</h1>
