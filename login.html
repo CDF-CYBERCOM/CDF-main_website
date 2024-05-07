@@ -1,5 +1,155 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>(U//FOUO) MyPortal Login</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+      function menuToggle() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+      var modal = document.getElementById("modal");
+      var span = document.getElementById("modalClose");
+      modalLoad() {
+        modal.style.display = "block";
+      }
+      span.onclick = modalClose() {
+        modal.style.display = "none";
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #007a33;
+        z-index: 1;
+      }
+      header p {
+        font: 12px Roboto, sans-serif;
+        color: white;
+        text-align: center;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: #007a33;
+        z-index: 1;
+      }
+      footer p {
+        font: 12px Roboto, sans-serif;
+        color: white;
+        text-align: center;
+      }
+      .main {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font: Roboto, sans-serif;
+        z-index: 2;
+      }
+      .navbar {
+        background-color: #020079;
+        overflow: hidden;
+        width: 100%;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font: Roboto, sans-serif;
+      }
+      .navbar a:hover {
+        background-color: grey;
+        color: #020079;
+      }
+      .navbar a.active {
+        background-color: grey;
+        color: #020079;
+      }
+      .navbar .icon {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        .navbar a:not(:first-child) {
+          display: none;
+        }
+        .navbar a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .navbar.responsive {
+          position: relative;
+        }
+        .navbar.responsive a.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .navbar.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      #myportal {
+        float: right;
+      }
+      @media screen and (max-width: 600px) {
+        #myportal {
+          float: none;
+        }
+      }
+      p {
+         font: 18px Roboto, sans-serif;
+      }
+      h1 {
+         font: Roboto, sans-serif;
+      }
+      h2 {
+         font: Roboto, sans-serif;
+      }
+      h3 {
+         font: Roboto, sans-serif;
+      }
+      h4 {
+         font: Roboto, sans-serif;
+      }
+      h5 {
+         font: Roboto, sans-serif;
+      }
+      h6 {
+         font: Roboto, sans-serif;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+      }
+    </style>
+  </head>
   <body>
     <div id="CDF-IS-modal" class="modal">
       <div class="modal-contents">
@@ -8,11 +158,17 @@
         <h4>By using this IS (which includes any device attached to this IS), you consent to the following conditions:</h4>
         <ul>
           <li>The CDF routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.</li>
+          <br>
           <li>At any time, the CDF may inspect and seize data stored on this IS.</li>
+          <br>
           <li>Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any CDF authorized purpose.</li>
+          <br>
           <li>This IS includes security measures (e.g., authentication and access controls) to protect CDF interests--not for your personal benefit or privacy.</li>
+          <br>
           <li>NOTICE: There is the potential that information presented and exported from the CDF Portal contains FOUO or Controlled Unclassified Information (CUI). It is the responsibility of all users to ensure information extracted from the CDF Portal is appropriately marked and properly safeguarded. If you are not sure of the safeguards necessary for the information, contact your functional lead or Information Security Officer.</li>
+          <br>
           <li>NOTICE: There is the potential that information presented and exported from sites connected to the CDF Portal contains FOUO, Controlled Unclassified Information (CUI), National Security Information (NSI), or Critical Security Information (CSI). It is the responsibility of all users to ensure information extracted from sites connected to the CDF Portal is appropriately marked and properly safeguarded. If you are not sure of the safeguards necessary for the information, contact your functional lead or Information Security Officer.</li>
+          <br>
           <li>Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See <a href="/user_agreement.html">User Agreement</a> for details.</li>
         </ul>
         <span class="modalClose">I Agree</span>
